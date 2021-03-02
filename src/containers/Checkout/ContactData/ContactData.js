@@ -204,4 +204,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps)(withErrorHandler(ContactData));
+export default connect(mapStateToProps)(withErrorHandler(ContactData, axios));
