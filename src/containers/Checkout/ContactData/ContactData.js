@@ -108,15 +108,6 @@ class ContactData extends Component {
             price: parseFloat(this.props.price).toFixed(2), // In real app, this should be calculated on the server, to prevent client-side code manipulation
             orderData: formData
         }
-
-        axios.post('/orders.json', order)
-            .then(response => {
-                this.setState({loading: false});
-                this.props.history.push('/');
-            })
-            .catch(error => {
-                this.setState({loading: false});
-            });
     }
 
     checkValidity(value, rules) {
